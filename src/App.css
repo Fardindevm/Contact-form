@@ -1,38 +1,180 @@
 .App {
-  text-align: center;
+  background-color: hsl(0, 0%, 100%);
+  max-width: 85vh;
+  border-radius: 12px;
+  padding: 30px;
+  margin: 0 auto;
+  margin-top: 15px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > h2 {
+  margin-left: 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Name {
+  border: none;
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+fieldset {
+  border: none;
+}
+
+label {
+  color: #444b4c;
+  font-size: 13px;
+  width: 100%;
+  cursor: pointer;
+}
+
+fieldset{
+  margin-top: 15px;
+}
+
+.label {
+  display:inline-block; 
+  margin-top: 15px;
+}
+
+.space {
+  margin-top: 5px;
+}
+
+.asterisk {
+  color: #638c7e;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid hsl(186, 15%, 59%);
+  color: hsl(187, 24%, 22%);
+  border-radius: 7px;
+  padding: 0 16px;
+  font-size: 14px;
+  height: 40px;
+  /* line-height: 2.3em; */
+}
+
+.radio {
+  border: 1px solid hsl(186, 15%, 59%);
+  width: 100%;
+  color: hsl(187, 24%, 22%);
+  border-radius: 7px;
+  font-size: 14px;
+  display: flex;
+  justify-content: flex-start;
   align-items: center;
+  height: 40px;
+}
+
+.radio > label:not(:first-child) {
+  margin-top: -2.5px;
+}
+
+.circular-checkbox {
+  width: 18px;
+  height: 15px;
+  border: 2px solid hsl(186, 15%, 59%);
+  border-radius: 50%;
+  cursor: pointer;
+  vertical-align: center;
+  margin-top: 2px;
+  margin: 0 12px 0 20px;
+}
+
+.circular-checkbox:checked, .agreement:checked {
+  accent-color: hsl(169, 82%, 27%) ;
+}
+
+.query {
+  font-size: 15px;
+}
+
+textarea {
+  width: 100%;
+  resize: none;
+  overflow: hidden;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 5px;
+  padding: 5px 12px;
+}
+
+input, textarea, .radio { 
+  margin-top: 10px
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border: 2px solid hsl(169, 82%, 27%);
+}
+
+.input:hover:not(:focus), textarea:hover:not(:focus) {
+  border: 1.5px solid hsl(169, 82%, 27%)
+}
+
+.teamwork-acception {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.agreement {
+  margin-right: 15px;
+  vertical-align: center;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.consent {
+  margin-top: 6px;
+}
+
+.submit {
+  background-color: hsl(169, 82%, 27%);
+  width: 100%;
+  padding: 15px 0;
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.submit:hover {
+  background-color: #063f36;
+}
+
+.error {
+  color: #444b4c;
+  font-size: 13px;
+  color: hsl(0, 66%, 54%);
+}
+
+.consent {
+  display: block;
+  width: 100%;
+}
+
+.parent-error {
+  border: 1px solid hsl(0, 66%, 54%)
+}
+
+@media (max-width: 455px) {
+  .App {
+    width: 90%;
+    padding: 20px;
   }
-  to {
-    transform: rotate(360deg);
+  .Name {
+    /* flex-direction: column !important; */
+    display: block !important;
+  }
+  textarea {
+    min-height: 200px;
+  }
+  .teamwork-acception {
+    max-width: 85%;
   }
 }
